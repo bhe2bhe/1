@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="description">
+      <meta http-equiv="X-UA-Compatible" content="IE-edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Yaela's Web</title>
+      <style>
+        body {
+          font-family: Arial;            
+        }       
+        @media (max-width: 768px) {
+          body {font-family: 20px;
+          }
+        } 
+
+        header {
+          background-color: rgb(119, 119, 182);
+          padding-top: 10px;
+          padding-bottom: 10px;
+          padding-left: 10px;
+          padding-right: 10px;
+          display: flex;
+          justify-content: space-between;
+        }                
+        .bhe2bhe {            
+          padding-top:10px;
+          font-family: 'Courier New', Courier, monospace;
+          color: white;            
+          font-weight: bold;
+          font-size: 10px;
+          transition: font-size 2s, color 2s;
+          cursor: not-allowed;
+        }
+        .bhe2bhe:hover {       
+          padding-top: 1px;
+          font-size: 50px;
+          color: rgb(232, 202, 68);
+        }
+        @media (max-width: 768px) {
+          .bhe2bhe:hover {
+            padding-top: 5px;
+            font-size: 18px;
+          }
+        }
+        .nav button {
+          border: .5px solid black;
+          background-color: white;
+          transition: margin-right 1s, box-shadow 1s;
+        }
+        .nav button:hover {
+          margin-right: 10px;
+          box-shadow: 10px 0px 1px white;
+        }          
+        .nav button:active {
+          font-size: 10px;
+          box-shadow: none;
+          background-color: black;
+          margin-right: 5px;
+          border: .5px solid black;            
+        }
+        button {
+          border: none;
+          border-radius: 6px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          padding-left: 15px;
+          padding-right: 15px;
+          cursor: pointer;
+          transition: background-color .20s, color .20s;
+        }
+        button:hover {
+          background-color: rgb(88, 84, 84);
+          color: white;
+        }
+        h1 {
+          background-color: rgb(238, 238, 238);
+          margin-top: 50px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          text-align: center;
+          color: black;
+          box-shadow: 10px 8px 30px rgb(47, 47, 127);
+          margin-right: 50px;
+          margin-left: 50px;
+          border-radius: 5px;
+        }
+        .welcome-option {
+          display: flex;
+          flex-direction: column;
+          padding-left: 260px;
+          padding-right: 260px;
+        }
+        @media (max-width: 768px) {
+          .welcome-option {
+          display: flex;
+          padding-top: 15px; /* Decrease padding for smaller screens */
+          padding-left: 20px;
+          padding-right: 20px;
+          font-size: 14px; /* Adjust font size for smaller screens */
+        }
+      }
+        .welcome-option button {  
+          border: .5px solid black;
+          margin-bottom: 15px;
+          padding-top: 30px;
+          box-shadow: 10px 10px 10px gray;
+          transition: font-weight .5s, font-size .5s;
+        }
+        .welcome-option button:hover {
+        background-color: rgb(119, 119, 182);
+        font-weight: bold;
+        font-size: large;
+        }
+        .welcome-option button:active {
+          background-color: gray;
+          padding-top: 18px;
+          box-shadow: 12px 16px 12px gray;
+          margin-bottom: 20px;
+          /* font-size: 18px; */
+        }
+        .reminders {
+          padding-top: 50px;                       
+        }
+        .reminder-head {
+          font-weight: bold;
+          font-size:large;
+          text-decoration: underline;
+        }
+        .request-button {
+          background-color: rgb(232, 202, 68);
+          font-weight: bold;
+          border: .5px solid black;
+          padding-left: 8px;
+          padding-right: 8px;
+          border-radius: 8px;
+          transition: background-color .3s, color .3s, margin-left .3s, box-shadow .5s;
+          cursor: pointer;
+        }
+        .request-button:hover {
+          background-color: pink;
+          color: white;
+          box-shadow: -2px 3px 4px rgb(47, 47, 127);
+        }          
+        .request-button:active {            
+          font-size: 12px;
+          background-color: rgb(196, 86, 168);
+          
+        }
+        .reminders p {
+          font-size: small;
+          color: gray;
+        }
+        footer {
+          background-color: gray;
+          bottom: 0; 
+          left: 0; 
+          right: 0; 
+          background-color: rgb(119, 119, 182);
+          padding-top: 10px;
+          padding-bottom: 10px;
+          padding-left: 10px;
+          font-size: 11px;;
+        }
+        .container {
+          display: flex;
+          justify-content: space-between;
+          height: 50vmax;;
+        }
+        .row1,
+        .row2 {
+            flex: 1; /* Equal width for both rows */
+            background-color: rgb(229, 206, 237);
+            border: .5px solid black;
+            border-radius: 4px;;
+            margin: 8px; /* Adjust margin as needed */
+            box-shadow: 0px 3px 4px black;
+        }
+
+        /* Responsive styles for screens with a maximum width of 768px */
+        @media (max-width: 768px) {
+            .row1,
+            .row2 {
+                padding-left: 20px; /* Adjust padding for smaller screens */
+                padding-right: 20px; /* Adjust padding for smaller screens */
+                height: auto;
+            }              
+            .container {
+              flex-direction: column !important;
+            }
+        }
+
+      </style>
+    </head>
+    <body>
+      <header>
+        <div class="bhe2bhe">yaela</div>
+        <div class="nav">
+          <button>Home</button>
+          <button>Features</button>
+          <button>Services</button>
+          <button>Contact</button>
+        </div>
+      </header>
+      <div class="welcome">
+        <h1>Hello! Friend or no?</h1>
+      </div>
+      <div class="welcome-option">
+        <button>
+          I'm a friend, let me in
+        </button>
+        <button>
+          No, but let me in anyway
+        </button>
+        <button>
+          I don't know, just let me in
+        </button>
+      </div>
+      <div class="reminders">
+        <p class="reminder-head"><i>Reminders:</i></p>
+        <p>&#62; Only friends can post blogs, pictures, messages, and comments.</p>
+        <p>&#62; Click <span class="request-button" style="color:black"><i>this button</i></span> to request full access.</p>
+        <p>&#62; Others may just enjoy a wide variety of everything.</p>
+      </div>
+      <hr><br>
+      <div class="container">
+        <div class="row1">
+          Test
+        </div>
+        <div class="row2">
+          test
+        </div>
+      </div>
+      <br><br>
+      <div class="article">
+        <h2>
+          Featured Article
+        </h2>
+        <p class="author">
+          yaela_eowyn
+        </p>
+        <br><br>
+      </div>
+      <footer>
+        This is mum&baby's hobby website. Have fun!
+      </footer>
+
+      
+    </body>
+</html>
+
